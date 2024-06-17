@@ -37,5 +37,5 @@ jobs:
       - run: cargo test --verbose
       - run: cargo tarpaulin --ignore-tests
       - run: cargo clippy -- -D warnings
-      - run: cargo fmt -- check
+      - run: cargo fmt -- --check
       - run: cargo audit
