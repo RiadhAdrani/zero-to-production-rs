@@ -1,8 +1,20 @@
 [package]
 name = "zero-to-prod"
 version = "0.1.0"
+authors = ["Riadh Adrani <riadh_adrani@hotmail.fr>"]
 edition = "2021"
+
+[lib]
+# We could use any path here, but we are following the community convention
+# We could specify a library name using the `name` field. If unspecified,
+# cargo will default to `package.name`, which is what we want.
+path = "src/lib.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-web = "4.7.0"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+reqwest = "0.11"
+serde = { version = "1", features = ["derive"]}
+
